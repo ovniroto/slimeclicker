@@ -1,0 +1,21 @@
+@use 'variables' as v;
+
+/* Blorbs */
+
+.blorb {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.blorb100 {
+    width: 58px;
+    height: 58px;
+}
+
+/* Flabber */
+
+.flabber {
+    background: v.$blorbs;
+    background-position: 0px 0px;
+}

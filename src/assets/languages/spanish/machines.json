@@ -1,0 +1,10 @@
+{
+    "extractor": {
+        "name": "Extractor",
+        "description": ""
+    },
+    "refiner": {
+        "name": "Refinador",
+        "description": ""
+    }
+}

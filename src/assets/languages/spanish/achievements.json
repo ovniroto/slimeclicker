@@ -1,0 +1,124 @@
+{
+    "gamesaved": {
+        "name": "Partida Guardada",
+        "description": "Has guardado la partida con una precisión increible. Te mereces este logro!"
+    },
+    "questionmark": {
+        "name": "Me has descubierto D:",
+        "description": "Click en el espacio de este logro."
+    },
+
+
+    "machines50": {
+        "name": "50 Máquinas",
+        "description": "Tener <b>50 máquinas</b> compradas."
+    },
+    "machines100": {
+        "name": "100 Máquinas",
+        "description": "Tener <b>100 máquinas</b> compradas."
+    },
+    "machines300": {
+        "name": "300 Máquinas",
+        "description": "Tener <b>300 máquinas</b> compradas."
+    },
+    "machines500": {
+        "name": "500 Máquinas",
+        "description": "Tener <b>500 máquinas</b> compradas."
+    },
+    "machines1000": {
+        "name": "1000 Máquinas",
+        "description": "Tener <b>1000 máquinas</b> compradas."
+    },
+    "machines5000": {
+        "name": "5000 Máquinas",
+        "description": "Tener <b>5000 máquinas</b> compradas."
+    },
+    "machines50000": {
+        "name": "50.000 Máquinas",
+        "description": "Tener <b>50.000 máquinas</b> compradas."
+    },
+    "machines100000": {
+        "name": "100.000 Máquinas",
+        "description": "Tener <b>100.000 máquinas</b> compradas."
+    },
+
+
+    "extractor1": {
+        "name": "Primer Extractor",
+        "description": "Tener <b>1 extractor</b> comprado."
+    },
+    "extractor50": {
+        "name": "50 Extractores",
+        "description": "Tener <b>50 extractores</b> comprados."
+    },
+    "extractor100": {
+        "name": "100 Extractores",
+        "description": "Tener <b>100 extractores</b> comprados."
+    },
+    "extractor300": {
+        "name": "300 Extractores",
+        "description": "Tener <b>300 extractores</b> comprados."
+    },
+    "extractor500": {
+        "name": "500 Extractores",
+        "description": "Tener <b>500 extractores</b> comprados."
+    },
+    "extractor1000": {
+        "name": "1000 Extractores",
+        "description": "Tener <b>1000 extractores</b> comprados."
+    },
+    "extractor5000": {
+        "name": "5000 Extractores",
+        "description": "Tener <b>5000 extractores</b> comprados."
+    },
+
+
+    "refiner1": {
+        "name": "Primer Refinador",
+        "description": "Tener <b>1 refinador</b> comprada."
+    },
+    "refiner50": {
+        "name": "50 Refinadores",
+        "description": "Tener <b>50 refinadores</b> compradas."
+    },
+    "refiner100": {
+        "name": "100 Refinadores",
+        "description": "Tener <b>100 refinadores</b> compradas."
+    },
+    "refiner300": {
+        "name": "300 Refinadores",
+        "description": "Tener <b>300 refinadores</b> compradas."
+    },
+    "refiner500": {
+        "name": "500 Refinadores",
+        "description": "Tener <b>500 refinadores</b> compradas."
+    },
+    "refiner1000": {
+        "name": "1000 Refinadores",
+        "description": "Tener <b>1000 refinadores</b> compradas."
+    },
+    "refiner5000": {
+        "name": "5000 Refinadores",
+        "description": "Tener <b>5000 refinadores</b> compradas."
+    },
+
+
+    "streak7": {
+        "name": "Viciando 7 días seguidos",
+        "description": "Jugar <b>7 días</b> seguidos."
+    },
+    "streak30": {
+        "name": "Viciando 30 días seguidos",
+        "description": "Jugar <b>30 días</b> seguidos."
+    },
+    "streak100": {
+        "name": "Viciando 100 días seguidos",
+        "description": "Jugar <b>100 días</b> seguidos."
+    },
+    "streak365": {
+        "name": "Viciando 365 días seguidos",
+        "description": "Jugar <b>365 días</b> seguidos."
+    }
+
+
+}

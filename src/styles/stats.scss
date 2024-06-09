@@ -1,0 +1,27 @@
+@use 'variables' as v;
+
+.stats-title {
+    font-size: 15px;
+    font-family: "AlegreyaSansBold";
+    padding: 0;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.stats-text {
+    padding: 0;
+    color: #90929c;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.stats-text .date {
+    background: rgb(100 103 117 / 33%);
+    padding: 4px 7px 4px 7px;
+    margin-left: 7px;
+    border-radius: 4px;
+    font-size: 9px;
+    display: inline-block;
+    color: rgb(255 255 255 / 61%);
+    font-family: 'Verdana';
+}

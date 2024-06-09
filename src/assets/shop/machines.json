@@ -1,0 +1,14 @@
+{
+    "extractor": {
+        "icon": "extractor",
+        "price": 15,
+        "persecond": 0.1,
+        "multiplier": 1.05
+    },
+    "refiner": {
+        "icon": "refiner",
+        "price": 80,
+        "persecond": 5,
+        "multiplier": 1.08
+    }
+}

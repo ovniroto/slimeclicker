@@ -1,0 +1,32 @@
+@use 'variables' as v;
+
+/* Slimes */
+
+.slime {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.slime100 {
+    width: 58px;
+    height: 58px;
+}
+
+.slime200 {
+    width: 112px;
+    height: 112px;
+}
+
+.slime500 {
+    width: 280px;
+    height: 280px;
+}
+
+/* Flabber */
+
+.flabber {
+    background: v.$slimes;
+    background-position: 0px 0px;
+    background-size: contain;
+}

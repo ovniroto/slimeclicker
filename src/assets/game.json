@@ -1,0 +1,9 @@
+{
+    "version": "0.1.55",
+    "saveName": "SlimeClicker",
+    "debug": true,
+    "console": {
+        "title": "\nSlime Clicker\nCreated by LOSDEV\n",
+        "description": "\n👋 Hi! If you want to report bugs or something else, please visit our Discord server: https://discord.gg/D6TpY8RHC9\n"
+    }
+}

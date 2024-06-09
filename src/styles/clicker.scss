@@ -1,0 +1,58 @@
+@use 'variables' as v;
+
+.clicker {
+    height: 100vh;
+    display: block;
+    padding-top: 40px;
+}
+
+.clicker > .title {
+    max-width: 500px;
+    margin: 0 auto 35px auto;
+    position: relative;
+    z-index: 99;
+    text-align: center;
+    color: #fff;
+    font-family: "AlegreyaSansBold";
+    font-size: 31px;
+    cursor: pointer;
+}
+
+.clicker > .title:hover {
+    text-shadow: 0px 0px 12px rgb(117 141 255 / 92%);
+}
+
+.clicker > .blorbs {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    font-family: "AlegreyaSansBold";
+    text-shadow: 0px 0px 14px #3e437a;
+    position: relative;
+    z-index: 90;
+    max-width: 242px;
+    margin: 0px auto;
+    line-height: 32px;
+}
+
+.clicker > .blorbspersecond {
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    margin-top: -5px;
+    font-family: "AlegreyaSans";
+    text-shadow: 0px 0px 14px #3e437a;
+    position: relative;
+    z-index: 90;
+}
+
+.clicker > .blorbs > .name {
+    font-family: 'AlegreyaSans';
+    margin-left: 6px;
+}
+
+.clicker-head {
+    position: relative;
+    background: v.$background-head;
+    height: 64px;
+}

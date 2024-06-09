@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slime Clicker</title>
+        <link rel="icon" href="./favicon.ico" sizes="16x16">
+
+        <!-- Open Graph -->
+        <meta property="og:url" content="https://slimeclicker.com">
+        <meta property="og:site_name" content="Slime Clicker">
+        <meta property="og:title" content="Slime Clicker">
+        <meta property="og:description" content="Slime Clicker Game">
+        <meta property="og:image:type" content="image/png">
+
+        <!-- Twitter -->
+        <meta property="twitter:site" content="slimeclicker">
+        <meta property="twitter:creator" content="losdev_">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:title" content="Slime Clicker">
+        <meta property="twitter:description" content="Slime Clicker Game">
+
+        <!-- Javascript Librarys -->
+        <script type='text/javascript' src="./src/libs/jquery.min.js"></script>
+        <script type='text/javascript' src="./src/libs/bootstrap.min.js"></script>
+        <script type='text/javascript' src="./src/libs/filesaver.min.js"></script>
+        <script type='text/javascript' src="./src/libs/confetti.min.js"></script>
+
+        <!-- CSS Librarys -->
+        <link rel="stylesheet" href="./src/libs/bootstrap.min.css">
+
+    </head>
+    <body>
+
+        <div class="background bg-default" id="background"></div>
+
+        <!-- Loading screen -->
+        <div class="loading-page" id="loading">
+            <div class="text">Slime Clicker</div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="notifications" id="notifications">
+            <div class="close-all"></div>
+        </div>
+
+        <div class="bushbar-right"></div>
+        <div class="bushbar-left"></div>
+
+        <!-- Game -->
+        <div class="container-fluid game-container" id="game">
+            <div class="row vh-100">
+                <div class="col-fluid column-left">
+
+                    <div class="clicker-background default"></div>
+                    <div class="clicker-background-overlay"></div>
+
+                    <div class="clicker-head"></div>
+
+                    <!-- Clicker -->
+                    <div class="clicker" id="clicker">
+                        <div class="title">{{CLICKER_TITLE}}</div>
+                        <div class="blorbs"><span class="counter">0</span><span class="name">{{BLORB_MIN_PLURAL}}</span></div>
+                        <div class="blorbspersecond">{{CLICKER_PER_SECOND}}: <span class="bps">0.0</span></div>
+                        <div class="big-button slime slime500 flabber"></div>
+                        <div class="particles"></div>
+                        <div class="click-me"></div>
+                    </div>
+
+                    <!-- Side Buttons -->
+                    <div class="side-buttons">
+                        <ul>
+                            <li class="side-button machines active" data-bs-custom-class="side-buttons-tooltip" data-page="machines" data-bs-toggle="tooltip" data-bs-placement="left" title="{{TAB_MACHINES}}"></li>
+                            <li class="side-button slimes" data-bs-custom-class="side-buttons-tooltip" data-page="slimes" data-bs-toggle="tooltip" data-bs-placement="left" title="{{TAB_SLIMES}}"></li>
+                            <li class="side-button quests" data-bs-custom-class="side-buttons-tooltip" data-page="quests" data-bs-toggle="tooltip" data-bs-placement="left" title="{{TAB_QUESTS}}"></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-fluid column-center">
+                    <!-- Content -->
+                    <div class="game-head">
+                        <ul>
+                            <li class="head-button stats" data-page="stats">{{TAB_STATS}}</li>
+                            <li class="head-button achievements" data-page="achievements">{{TAB_ACHIEVEMENTS}}</li>
+                            <li class="head-button information" data-page="information">{{TAB_INFORMATION}}</li>
+                            <li class="head-button updates" data-page="updates">{{TAB_UPDATES}}</li>
+                            <li class="icon-button settings" data-page="options"></li>
+                        </ul>
+                    </div>
+
+                    <!-- Machines -->
+                    <div class="game-page active" id="machines">
+                        <div>machines</div>
+                    </div>
+
+                    <!-- Slimes -->
+                    <div class="game-page" id="slimes">
+                        <div>slimes</div>
+                    </div>
+
+                    <!-- Quests -->
+                    <div class="game-page" id="quests">
+                        <div>quests</div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="game-page" id="stats">
+                        <div class="bg-page"></div>
+                        <h1 class="stats">{{TITLE_STATS}}</h1>
+                        <div class="options-content">
+                            <div class="title">
+                                {{TITLE_GENERAL}}
+                            </div>
+                            <div class="row option-row first">
+                                <div class="col"><div class="stats-title">{{STATS_PLAYER}}:</div><div class="stats-text" id="player"></div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col"><div class="stats-title">{{STATS_ID}}:</div><div class="stats-text" id="id"></div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col"><div class="stats-title">{{STATS_STARTED}}:</div><div class="stats-text" id="started"></div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col"><div class="stats-title">{{STATS_TIME_PLAYED}}:</div><div class="stats-text" id="time-played"></div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col"><div class="stats-title">{{STATS_LAST_SAVE}}:</div><div class="stats-text" id="last-save"></div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col"><div class="stats-title">{{STATS_CURRENT_STUFF}}:</div><div class="stats-text" id="current-blorbs"></div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col"><div class="stats-title">{{STATS_GENERATED_STUFF}}:</div><div class="stats-text" id="generated-blorbs"></div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col"><div class="stats-title">{{STATS_GENERATED_STUFF_UNIVERSE}}:</div><div class="stats-text" id="generated-blorbs-universe"></div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col"><div class="stats-title">{{STATS_TOTAL_CLICKS}}:</div><div class="stats-text" id="total-clicks"></div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col"><div class="stats-title">{{STATS_BUILDINGS_PURCHASED}}:</div><div class="stats-text" id="machines-purchased"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Achievements -->
+                    <div class="game-page" id="achievements">
+                        <div class="bg-page"></div>
+                        <h1 class="achievements">{{TITLE_ACHIEVEMENTS}}</h1>
+                        <div class="page-content">
+
+                            <!-- Normal achievements -->
+                            <div class="achievement-block mb-3" id="normal">
+                                <div class="achievement-head">
+                                    <h1>{{ACHIEVEMENTS_TITLE_NORMAL}}</h1>
+                                    <div class="description">{{ACHIEVEMENTS_DESCRIPTION_NORMAL}}</div>
+                                    <div class="percent" id="percent"></div>
+                                </div>
+                                <div class="achievement-list" id="list"></div>
+                            </div>
+
+                            <!-- Special achievements -->
+                            <div class="achievement-block mb-3" id="special">
+                                <div class="achievement-head">
+                                    <h1>{{ACHIEVEMENTS_TITLE_SPECIAL}}</h1>
+                                    <div class="description">{{ACHIEVEMENTS_DESCRIPTION_SPECIAL}}</div>
+                                    <div class="percent" id="percent"></div>
+                                </div>
+                                <div class="achievement-list" id="list"></div>
+                            </div>
+
+                            <!-- Hard achievements -->
+                            <div class="achievement-block" id="hard">
+                                <div class="achievement-head">
+                                    <h1>{{ACHIEVEMENTS_TITLE_HARD}}</h1>
+                                    <div class="description">{{ACHIEVEMENTS_DESCRIPTION_HARD}}</div>
+                                    <div class="percent" id="percent"></div>
+                                </div>
+                                <div class="achievement-list last" id="list"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Options -->
+                    <div class="game-page" id="options">
+                        <div class="bg-page"></div>
+                        <h1>{{TITLE_OPTIONS}}</h1>
+                        <div class="options-content">
+                            <div class="title">
+                                {{TITLE_GENERAL}}
+                            </div>
+                            <div class="row option-row first">
+                                <div class="col-3"><div class="game-button option default" id="language"><div class="flag {{FLAG_LANGUAGE}}"></div> {{OPTION_LANGUAGE}}: <span id="lang-selected"></span></div></div>
+                                <div class="col-9"><div class="option-text">{{OPTION_LANGUAGE_DESCRIPTION}}</div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col-3"><div class="game-button option default" id="save">{{OPTION_SAVE}}</div></div>
+                                <div class="col-9"><div class="option-text">{{OPTION_SAVE_DESCRIPTION}}</div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col-3"><div class="game-button option default" id="export-save">{{OPTION_EXPORT_FILE}}</div></div>
+                                <div class="col-9"><div class="option-text">{{OPTION_EXPORT_FILE_DESCRIPTION}}</div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col-3"><div class="game-button option default">{{OPTION_IMPORT_SAVE_FILE}}<input type="file" class="file-hidden" id="import-save" /></div></div>
+                                <div class="col-9"><div class="option-text">{{OPTION_IMPORT_SAVE_FILE_DESCRIPTION}}</div></div>
+                            </div>
+                            <div class="row option-row last-title">
+                                <div class="col-3"><div class="game-button warning" id="newgame">{{OPTION_NEW_GAME}}</div></div>
+                                <div class="col-9"><div class="option-text">{{OPTION_NEW_GAME_DESCRIPTION}}</div></div>
+                            </div>
+                            <div class="title">
+                                {{TITLE_SETTINGS}}
+                            </div>
+                            <div class="row option-row first">
+                                <div class="col-3">
+                                    <div class="game-volume">
+                                        <div class="title">{{SETTINGS_VOLUME}}</div>
+                                        <div class="percent"></div>
+                                        <input type="range" step="0.01" min="0" max="1" value="0.5" id="volume">
+                                    </div>
+                                </div>
+                                <div class="col-9"><div class="option-volume">{{SETTINGS_VOLUME_DESCRIPTION}}</div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col-3"><div class="game-button setting" id="close-alert">{{SETTINGS_CLOSE_ALERT}}</div></div>
+                                <div class="col-9"><div class="option-text">{{SETTINGS_CLOSE_ALERT_DESCRIPTION}}</div></div>
+                            </div>
+                            <div class="row option-row">
+                                <div class="col-3"><div class="game-button setting" id="confetti">{{SETTINGS_CONFETTI}}</div></div>
+                                <div class="col-9"><div class="option-text">{{SETTINGS_CONFETTI_DESCRIPTION}}</div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Information -->
+                    <div class="game-page" id="information">
+                        <div class="bg-page"></div>
+                        <h1 class="information">{{TITLE_INFORMATION}}</h1>
+                        <div class="page-content">
+                            <div class="title">{{INFORMATION_TITLE_ABOUT}}</div>
+                            <div class="text last-title">{{INFORMATION_ABOUT}}</div>
+                            <div class="title">{{INFORMATION_TITLE_CREDITS}}</div>
+                            <div class="text">{{INFORMATION_CREDITS}}</div>
+                        </div>
+                    </div>
+
+                    <!-- Updates -->
+                    <div class="game-page" id="updates">
+                        <div class="bg-page"></div>
+                        <h1 class="updates">{{TITLE_UPDATES}}</h1>
+                        <div class="page-update" id="update-list"></div>
+                    </div>
+
+                    <!-- Shop -->
+                    <div class="game-page" id="shop">
+                        <div>shop</div>
+                    </div>
+
+                    <!-- Money -->
+                    <div class="game-page" id="money">
+                        <div>money</div>
+                    </div>
+
+                    <!-- End content -->
+                </div>
+
+                <!-- Right column -->
+                <div class="col-fluid column-right" id="side">
+
+                    <div class="side-head">
+                        <li class="head-button shop active" data-page="shop"><img src="<%= require('./assets/images/icons/store.png') %>" data-page="shop"> {{TAB_SHOP}}</li>
+                        <li class="head-button money active" data-page="money"><img src="<%= require('./assets/images/icons/lin.png') %>" data-page="money"> <span class="money-total" id="money" data-page="money">0</span></li>
+                    </div>
+
+                    <div class="side-subhead">
+                        <li class="head-button buy active" data-side="buy">{{TAB_BUY}}</li>
+                        <li class="head-button sell" data-side="sell">{{TAB_SELL}}</li>
+                    </div>
+
+                    <div class="shop" id="shop">
+                        <!-- Buy items -->
+                        <div class="side-container buy active" id="buy">
+                            <div class="panel-container">
+                                <!-- Upgrades -->
+                                <div class="panel-title">{{TITLE_UPGRADES}}</div>
+                                <div class="panel-items" id="upgrades"></div>
+                            </div>
+                            <div class="panel-container">
+                                <!-- Machines -->
+                                <div class="panel-title">{{TITLE_BUILDINGS}}</div>
+                                <div class="panel-items" id="machines"></div>
+                            </div>
+                        </div>
+
+                        <!-- Sell items -->
+                        <div class="side-container sell" id="sell">
+                            <div class="panel-container">
+                                <!-- Blorbs -->
+                                <div class="panel-title">{{TITLE_BLORBS}}</div>
+                                <div class="panel-items" id="blorbs"></div>
+                            </div>
+                            <div class="panel-container">
+                                <!-- Machines -->
+                                <div class="panel-title">{{TITLE_BUILDINGS}}</div>
+                                <div class="panel-items" id="machines"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- End game -->
+
+        <!-- Modals -->
+
+        <!-- Languages -->
+        <div class="modal fade" id="language-modal" tabindex="-1" role="dialog" aria-labelledby="languageModal" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="languageModal">{{MODAL_LANGUAGE_TITLE}}</h5>
+                        <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="{{MODAL_CLOSE}}"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="lang-list" id="languages">
+                            <div class="game-button setting" data-lang="english" style="width: 180px; margin: 0px auto 6px 8px;"><div class="flag english"></div>{{LANG_ENGLISH}}</div>
+                            <div class="game-button setting" data-lang="spanish" style="width: 180px; margin: 0px auto 6px 8px;"><div class="flag spanish"></div>{{LANG_SPANISH}}</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="game-button setting" data-bs-dismiss="modal" style="width: 100px; margin: 0 auto 0 63px;">{{MODAL_CANCEL}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Game -->
+        <div class="modal fade" id="newgame-modal" tabindex="-1" role="dialog" aria-labelledby="newgameModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="newgameModal">{{MODAL_NEW_GAME_TITLE}}</h5>
+                        <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="{{MODAL_CLOSE}}"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-text">
+                            {{MODAL_NEW_GAME_DESCRIPTION}}
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="game-button warning" id="confirm-newgame" style="width: 100px; margin: 0 auto;">{{MODAL_CONFIRM}}</div>
+                        <div class="game-button setting" data-bs-dismiss="modal" style="width: 100px; margin: 0 auto;">{{MODAL_CANCEL}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player Name -->
+        <div class="modal fade" id="playername-modal" tabindex="-1" role="dialog" aria-labelledby="playernameModal" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="playernameModal">{{MODAL_PLAYERNAME_TITLE}}</h5>
+                        <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="{{MODAL_CLOSE}}"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-text">
+                            {{MODAL_PLAYERNAME_DESCRIPTION}}
+                            <input class="modal-input" id="player-name" placeholder="{{MODAL_PLAYERNAME_INPUT_PLACEHOLDER}}">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="game-button setting active" id="confirm-playername" style="width: 100px; margin: 0 auto;">{{MODAL_CONFIRM}}</div>
+                        <div class="game-button setting" data-bs-dismiss="modal" style="width: 100px; margin: 0 auto;">{{MODAL_CANCEL}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End modals -->
+
+    </body>
+</html>

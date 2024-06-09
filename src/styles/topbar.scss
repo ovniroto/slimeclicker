@@ -1,0 +1,74 @@
+@use 'variables' as v;
+
+.top {
+    background: v.$background-topbar;
+    background-repeat: repeat-x;
+    height: 36px;
+    position: relative;
+    z-index: 9999;
+    box-shadow: 0px 0px 20px rgb(13, 13, 15);
+}
+
+.top ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.top li {
+    display: inline-block;
+    padding: 7px 12px;
+    color: #ebebeb;
+    font-size: 13px;
+    border-right: 1px solid rgb(0 0 0 / 16%);
+}
+
+.top li a {
+    color: #fff;
+    margin: -10px -12px -10px -12px;
+    padding: 10px 12px 10px 12px;
+    text-decoration: none;
+}
+
+.top li img {
+    margin-right: 7px;
+    margin-top: -2px;
+}
+
+.top li.float-right {
+    float: right;
+    border-left: 1px solid rgba(25,24,28,.368627451);
+}
+
+.top li.copy b {
+    font-family: 'AlegreyaSansBold';
+    font-size: 16px;
+    line-height: 0px;
+}
+
+.copy a:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 10px #bb4dff !important;
+}
+
+.copy a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.discord a:hover {
+    color: #9ea7ff !important;
+    background: rgb(88 101 242 / 21%);
+    text-shadow: 1px 1px 0px rgb(0 0 0 / 43%);
+}
+
+.twitter a:hover {
+    color: #55caff !important;
+    background: rgb(3 168 244 / 23%);
+    text-shadow: 1px 1px 0px rgb(0 0 0 / 43%);
+}
+
+.patreon a:hover {
+    color: #ff737c !important;
+    background: rgb(255 66 77 / 23%);
+    text-shadow: 1px 1px 0px rgb(0 0 0 / 43%);
+}

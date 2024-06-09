@@ -1,0 +1,91 @@
+@use 'variables' as v;
+
+.notifications {
+    position: absolute;
+    z-index: 999;
+    right: 42vw;
+    bottom: 0;
+}
+
+.notifications .close-all {
+    background: v.$button-close;
+    background-position: 0px 0px;
+    width: 40px;
+    height: 42px;
+    display: none;
+    position: absolute;
+    right: -49px;
+    bottom: 7px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.notifications .close-all:hover {
+    background: v.$button-close;
+    background-position: 0px 42px;
+}
+
+.notifications .close-all.active {
+    display: block;
+}
+
+.notification-panel {
+    border: 6px solid transparent;
+    border-image: v.$border-notification 6 round;
+    background: v.$background-page !important;
+    color: #cacfdc;
+    position: relative;
+    padding: 12px 14px 7px 14px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgb(0 0 0 / 43%);
+    width: 296px;
+    left: 0;
+    top: 0;
+}
+
+.notification-panel.minimal {
+    padding-bottom: 6px;
+}
+
+.notification-panel .title {
+    font-family: 'AlegreyaSansBold';
+    font-size: 17px;
+    margin-left: 60px;
+    color: rgb(255 255 255);
+    text-shadow: 1px 1px 0px rgb(30 31 39);
+}
+
+.notification-panel .toptitle {
+    font-family: "AlegreyaSans";
+    font-size: 15px;
+    margin-left: 60px;
+    margin-top: -1px;
+}
+
+.notification-panel .message {
+    font-size: 14px;
+    font-family: 'AlegreyaSans';
+    color: rgb(202 207 220 / 70%);
+}
+
+.notification-panel.achievement .icon {
+    transform: translateY(-50%);
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    left: 4px;
+    top: 50%;
+}
+
+.notification-panel.achievement .message {
+    font-size: 14px;
+    font-family: "AlegreyaSans";
+    color: rgba(202,207,220,.7);
+    margin-left: 68px;
+}
+
+.notification-panel .close:hover {
+    color: #dddee9;
+    text-shadow: 0px 0px 6px rgb(255 255 255 / 48%);
+}

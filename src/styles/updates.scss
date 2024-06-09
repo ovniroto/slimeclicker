@@ -1,0 +1,94 @@
+@use 'variables' as v;
+
+.game-page .page-update {
+    color: #c6c6cb;
+    font-size: 14px;
+}
+
+.update-content {
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 28%);
+    background: v.$background-page;
+    border: 6px solid transparent;
+    border-image: v.$border-page 6 round;
+    border-radius: 10px;
+    padding: 16px 21px;
+    margin-bottom: 11px;
+}
+
+.update-content .version {
+    position: absolute;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    right: 39px;
+    margin-top: -1px;
+    color: #a0a5ad;
+    font-weight: bold;
+}
+
+.update-content .current {
+    background: rgb(41 155 203);
+    color: rgb(255 255 255);
+    padding: 3px 7px;
+    border-radius: 3px;
+    margin-left: 4px;
+}
+
+.update-content .number {
+    background: rgb(71 71 87);
+    color: rgb(255 255 255 / 64%);
+    padding: 3px 7px;
+    border-radius: 3px;
+    margin-left: 4px;
+}
+
+.update-content > .title {
+    font-family: "AlegreyaSansBold";
+    color: rgb(255 255 255);
+    text-shadow: 2px 2px rgb(103 106 122 / 45%);
+    margin-top: 10px;
+    font-size: 30px;
+    width: 100%;
+}
+
+.update-content .description {
+    font-size: 15px;
+    margin-top: 6px;
+    color: rgb(157 158 170);
+    margin-bottom: 19px;
+}
+
+.update-content .changes .title {
+    font-size: 18px;
+    font-family: "AlegreyaSansBold";
+}
+
+.update-content .changes ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.update-content .changes li {
+    background: v.$update-dot;
+    background-position: 0px 3px;
+    background-repeat: no-repeat;
+    padding: 0px 0px 0px 23px;
+    margin-bottom: 1px;
+    font-size: 14px;
+    color: #c2c3cd;
+}
+
+.update-content .release span {
+    background: rgb(71 71 87 / 74%);
+    color: rgb(180 181 197);
+    padding: 1px 3px;
+    font-size: 11px;
+    border-radius: 3px;
+    margin-right: 2px;
+}
+
+.update-content .release {
+    font-size: 12px;
+    color: rgb(152 152 168);
+}

@@ -1,0 +1,459 @@
+@use 'variables' as v;
+
+/**
+ * Click-me button
+ * Invisible button to see particles below and don't click them
+ */
+
+ .click-me {
+    position: relative;
+    width: 260px;
+    height: 233px;
+    cursor: pointer;
+    z-index: 999;
+    margin: -262px auto 0;
+}
+
+.big-button {
+    position: relative;
+    width: 270px;
+    height: 240px;
+    z-index: 10;
+    transition: all 0.05s ease-in-out;
+    margin: 50px auto 0;
+}
+
+/* Page close button */
+
+.game-page .close-button {
+    position: absolute;
+    top: 24px;
+    right: 22px;
+    font-size: 15px;
+    font-family: "AlegreyaSansBold";
+    text-transform: uppercase;
+    width: 80px;
+    height: 25px;
+    padding-top: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.game-page .close-button:hover {
+    color: rgb(216 71 71);
+    text-shadow: 0px 0px 9px rgb(216 71 71 / 54%);
+}
+
+.game-page .close-button img {
+    margin-left: 4px;
+    margin-top: -3px;
+}
+
+/* Head buttons */
+
+.game-head li.icon-button {
+    filter: drop-shadow(0px 0px 2px rgb(30, 31, 32, 0.3));
+    display: block;
+    list-style: none;
+    cursor: pointer;
+    float: right;
+    height: 30px;
+    width: 32px;
+    margin-top: 17px;
+    margin-right: 16px;
+}
+
+.game-head li.icon-button.settings {
+    background: v.$button-settings;
+    background-position: 0px 0px;
+}
+
+.game-head li.icon-button.settings:hover {
+    background: v.$button-settings;
+    background-position: 0px -30px;
+}
+
+.game-head li.icon-button.settings.active {
+    background: v.$button-settings;
+    background-position: 0px -30px;
+}
+
+
+/* Game head */
+
+.game-head li.head-button {
+    display: inline-block;
+    list-style: none;
+    padding: 20px 23px;
+    cursor: pointer;
+    font-family: "AlegreyaSansBold";
+    font-size: 18px;
+    position: relative;
+    height: 64px;
+    color: rgb(178 179 196);
+    text-shadow: 1px 1px 0px rgb(23 25 30 / 52%);
+    border-right: 1px solid rgb(44 46 57 / 65%);
+    background-image: v.$button-head;
+}
+
+.game-head li.head-button:hover {
+    text-shadow: 1px 1px 0px rgb(23 25 30 / 52%);
+    border-right: 1px solid rgb(44 46 57 / 65%);
+    background-image: v.$button-head;
+    background-position: 0px -64px;
+    color: rgb(224, 225, 235);
+}
+
+.game-head li.head-button.active {
+    text-shadow: 1px 1px 0px rgb(23 25 30 / 52%);
+    border-right: 1px solid rgb(36 48 42);
+    background-image: v.$button-head;
+    background-position: 0px -128px;
+    color: rgb(221 243 228);
+}
+
+/* Side head */
+
+.side-head li.head-button {
+    display: inline-block;
+    list-style: none;
+    padding: 20px 23px;
+    cursor: pointer;
+    font-family: "AlegreyaSansBold";
+    font-size: 18px;
+    position: relative;
+    height: 64px;
+    color: rgb(178 179 196);
+    text-shadow: 1px 1px 0px rgb(23 25 30 / 52%);
+    background-image: v.$button-head;
+}
+
+.side-head li.head-button:hover {
+    text-shadow: 1px 1px 0px rgb(23 25 30 / 52%);
+    background-image: v.$button-head;
+    background-position: 0px -64px;
+    color: rgb(224, 225, 235);
+}
+
+.side-head li.head-button.active {
+    text-shadow: 1px 1px 0px rgb(23 25 30 / 52%);
+    background-image: v.$button-head;
+    background-position: 0px 0px;
+    color: rgb(255, 255, 255);
+}
+
+.side-head li.head-button.shop {
+    color: #ed5176;
+}
+
+.side-head li.head-button.shop img {
+    margin-right: 8px;
+    margin-top: -5px;
+}
+
+.side-head li.head-button.money img {
+    margin-top: -2px;
+}
+
+.side-head li.head-button.money {
+    float: right;
+}
+
+.side-head li.head-button.money .money-total {
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-top: -26px;
+    padding-left: 34px;
+    color: #ffba42;
+}
+
+/* Side subhead */
+
+.side-subhead li.head-button {
+    display: inline-block;
+    list-style: none;
+    padding: 9px 21px;
+    cursor: pointer;
+    font-family: "AlegreyaSansBold";
+    font-size: 14px;
+    position: relative;
+    height: 40px;
+    color: rgb(178 179 196);
+    text-shadow: 1px 1px 0px rgb(23 25 30 / 52%);
+    border-right: 1px solid rgb(23 23 26 / 46%);
+    background-image: v.$button-head;
+    background-position: 0px -344px;
+}
+
+.side-subhead li.head-button:hover {
+    text-shadow: 1px 1px 0px rgb(23 25 30 / 52%);
+    border-right: 1px solid rgb(44 46 57 / 65%);
+    background-image: v.$button-head;
+    background-position: 0px -408px;
+    color: rgb(224, 225, 235);
+}
+
+.side-subhead li.head-button.active {
+    text-shadow: 1px 1px 0px rgb(23 25 30 / 52%);
+    border-right: 1px solid rgb(36 48 42);
+    background-image: v.$button-head;
+    background-position: 0px -152px;
+    color: rgb(221 243 228);
+}
+
+/* Game button */
+
+.game-button {
+    padding: 9px 0px 0px 10px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    color: rgb(201 202 214);
+    font-family: "AlegreyaSansBold";
+    font-size: 15px;
+    text-shadow: 1px 1px 0px rgb(0 0 0 / 58%);
+    height: 44px;
+}
+
+.game-button img {
+    margin-right: 2px;
+}
+
+/* Warning button */
+
+.game-button.warning {
+    background: v.$button-warning;
+    background-position: 0px 0px;
+    color: rgb(255 206 204);
+}
+
+.game-button.warning:hover {
+    background: v.$button-warning;
+    background-position: 0px -44px;
+    color: rgb(255 237 236);
+}
+
+.game-button.warning:hover::after {
+    width: 11px;
+    height: 42px;
+    content: " ";
+    background: v.$button-warning;
+    background-position: 11px -44px;
+    position: absolute;
+    right: -11px;
+    top: 0;
+}
+
+.game-button.warning::after {
+    width: 9px;
+    height: 41px;
+    content: " ";
+    background: v.$button-warning;
+    background-position: 11px 0px;
+    position: absolute;
+    right: -9px;
+    top: 0;
+}
+
+/* Setting button */
+
+.game-button.setting {
+    background: v.$button-setting;
+    background-position: 0px 0px;
+    color: rgb(201 202 214);
+}
+
+.game-button.setting:hover {
+    background: v.$button-option;
+    background-position: 0px -44px;
+    color: rgb(232 232 240);
+}
+
+.game-button.setting:hover::after {
+    width: 11px;
+    height: 42px;
+    content: " ";
+    background: v.$button-option;
+    background-position: 11px -44px;
+    position: absolute;
+    right: -11px;
+    top: 0;
+}
+
+.game-button.setting::after {
+    width: 9px;
+    height: 41px;
+    content: " ";
+    background: v.$button-setting;
+    background-position: 11px 0px;
+    position: absolute;
+    right: -9px;
+    top: 0;
+}
+
+.game-button.setting.active {
+    background: v.$button-setting;
+    background-position: 0px -44px;
+    color: rgb(191, 255, 223);
+}
+
+.game-button.setting.active:hover {
+    background: v.$button-setting;
+    background-position: 0px -88px;
+    color: rgb(212, 255, 234);
+}
+
+.game-button.setting.active:hover::after {
+    width: 11px;
+    height: 42px;
+    content: " ";
+    background: v.$button-setting;
+    background-position: 11px -88px;
+    position: absolute;
+    right: -11px;
+    top: 0;
+}
+
+.game-button.setting.active::after {
+    width: 9px;
+    height: 42px;
+    content: " ";
+    background: v.$button-setting;
+    background-position: 11px -44px;
+    position: absolute;
+    right: -9px;
+    top: 0;
+}
+
+/* Default option button */
+
+.game-button.option.default {
+    background: v.$button-option;
+    background-position: 0px 0px;
+}
+
+.game-button.option.default:hover {
+    background: v.$button-option;
+    background-position: 0px -44px;
+    color: rgb(235 236 243);
+}
+
+.game-button.option.default:hover::after {
+    width: 11px;
+    height: 42px;
+    content: " ";
+    background: v.$button-option;
+    background-position: 11px -44px;
+    position: absolute;
+    right: -11px;
+    top: 0;
+}
+
+.game-button.option.default::after {
+    width: 9px;
+    height: 41px;
+    content: " ";
+    background: v.$button-option;
+    background-position: 11px 0px;
+    position: absolute;
+    right: -9px;
+    top: 0;
+}
+
+/* Modal close */
+
+button.btn-close-modal {
+    background: v.$button-close;
+    position: absolute;
+    z-index: 999;
+    right: -19px;
+    top: -19px;
+    width: 40px;
+    height: 42px;
+    border: 0px;
+}
+
+button.btn-close-modal:hover {
+    background: v.$button-close;
+    background-position: 0px -42px;
+}
+
+/* Notification close */
+
+.notification-panel .close {
+    background: v.$button-close;
+    filter: drop-shadow(0px 0px 4px rgb(0,0,0,0.3));
+    position: absolute;
+    z-index: 999;
+    right: -17px;
+    top: -17px;
+    width: 40px;
+    height: 42px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.notification-panel .close:hover {
+    background: v.$button-close;
+    background-position: 0px -42px;
+}
+
+/* */
+
+.side-buttons {
+    position: absolute;
+    top: 85px;
+    left: 90%;
+    z-index: 999;
+}
+
+.side-buttons ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.side-buttons li.side-button {
+    margin-bottom: 23px;
+    cursor: pointer;
+}
+
+.side-buttons li.side-button {
+    filter: drop-shadow(0px 0px 5px rgb(0,0,0,0.9));
+}
+
+.side-buttons li.side-button:hover {
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+    filter: drop-shadow(0px 2px 5px rgb(0,0,0,0.9));
+}
+
+.side-buttons .side-button.machines {
+    background: url(../assets/images/icons/side-buttons.png);
+    background-position: -2px 0px;
+    width: 54px;
+    height: 58px;
+}
+
+.side-buttons .side-button.slimes {
+    background: url(../assets/images/icons/side-buttons.png);
+    background-position: 0px -60px;
+    width: 58px;
+    height: 50px;
+}
+
+.side-buttons .side-button.quests {
+    background: url(../assets/images/icons/side-buttons.png);
+    background-position: 0px -110px;
+    width: 47px;
+    height: 50px;
+}
+
+.side-buttons-tooltip .tooltip-inner {
+    min-width: 105px !important;
+    height: 37px;
+    padding: 4px !important;
+}

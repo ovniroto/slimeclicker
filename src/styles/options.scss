@@ -1,0 +1,122 @@
+@use 'variables' as v;
+
+.game-page .options-content {
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 28%);
+    background: v.$background-page;
+    border: 6px solid transparent;
+    border-image: v.$border-page 6 round;
+    border-radius: 10px;
+    padding: 16px 23px 0px 23px;
+    color: #c6c6cb;
+    font-size: 14px;
+}
+
+.game-page > .options-content > .title {
+    font-size: 26px;
+    font-family: "AlegreyaSansBold";
+    margin: -11px 0px 22px -6px;
+    color: #fff;
+}
+
+.game-page > .page-content > .title {
+    font-size: 26px;
+    font-family: "AlegreyaSansBold";
+    margin: -18px -1px 6px -6px;
+    color: #fff;
+}
+
+.game-page > .page-content > .text {
+    border-bottom: 1px solid rgba(40,41,54,.43);
+    border-top: 1px solid rgba(40,41,54,.43);
+    padding: 20px;
+    margin: 0px -27px 0px -27px;
+    background: rgba(0,0,0,.05);
+}
+
+.game-page > .page-content > .text.last-title {
+    margin-bottom: 25px;
+}
+
+.option-row.last-title {
+    margin-bottom: 17px;
+}
+
+.option-row.first {
+    margin-top: -16px;
+    border-top: 1px solid rgba(40,41,54,.43);
+}
+
+.option-row {
+    border-bottom: 1px solid rgba(40,41,54,.43);
+    padding: 9px 10px 10px 10px;
+    margin: 0px -27px 0px -27px;
+    background: rgb(0 0 0 / 5%);
+}
+
+.option-text {
+    padding: 12px 0 0 10px;
+    color: rgb(144 146 156);
+    font-size: 14px;
+}
+
+.option-text .shortcut {
+    font-size: 10px;
+    background: rgb(74 76 91);
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 1px solid rgb(43 43 54);
+    box-shadow: 0px 0px 1px rgb(0 0 0 / 41%);
+    color: rgb(174 174 192);
+}
+
+.options-box {
+    margin-bottom: 24px;
+}
+
+/* Volume */
+
+.game-volume {
+    position: relative;
+}
+
+.game-volume .title {
+    position: absolute;
+    font-size: 15px;
+    font-family: 'AlegreyaSansBold';
+    left: 0px;
+    top: -2px;
+}
+
+.game-volume .percent {
+    position: absolute;
+    font-size: 13px;
+    font-weight: bold;
+    right: 0px;
+    top: -2px;
+}
+
+.option-volume {
+    padding: 20px 0 0 10px;
+    color: #90929c;
+    font-size: 14px;
+}
+
+/* Other */
+
+.warning-text {
+    color: rgb(255 78 61);
+}
+
+.file-hidden {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: -8px;
+    bottom: 0;
+    width: 108%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 999;
+    font-size: 0px;
+}

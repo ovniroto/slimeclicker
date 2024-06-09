@@ -1,0 +1,59 @@
+@use 'variables' as v;
+
+/* Modals */
+
+.modal-input {
+    background: rgb(73 75 94 / 44%);
+    border: 1px solid rgb(34 34 43 / 78%);
+    border-radius: 4px;
+    padding: 10px 19px;
+    display: block;
+    margin: 11px auto 0px auto;
+    text-align: center;
+    font-size: 16px;
+    font-family: "AlegreyaSansBold";
+    color: rgb(192 193 207);
+    width: 100%;
+    box-shadow: 0px 0px 13px rgb(0 0 0 / 32%) inset;
+}
+
+.modal-input::placeholder {
+    color: rgb(154 156 176);
+}
+
+.modal-content {
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 28%) !important;
+    background: v.$background-page !important;
+    border: 6px solid transparent !important;
+    border-image: v.$border-page 6 round !important;
+    border-radius: 10px !important;
+    padding: 23px !important;
+    color: #c6c6cb !important;
+    font-size: 14px !important;
+}
+
+.modal-header {
+    padding: 10px 10px 16px 10px !important;
+    border-bottom: 0px solid #dee2e6 !important;
+}
+
+.modal-title {
+    text-align: center !important;
+    width: 100% !important;
+    position: absolute !important;
+    margin-left: -33px;
+    margin-top: 12px !important;
+    font-family: 'AlegreyaSansBold';
+    font-size: 24px;
+}
+
+.modal-footer {
+    padding: 0px !important;
+    border-top: 0px solid #dee2e6 !important;
+}
+
+.modal-text {
+    padding: 0px 20px 14px 20px;
+    text-align: center;
+    font-size: 14px;
+}

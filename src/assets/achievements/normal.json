@@ -1,0 +1,23 @@
+[
+    { "id": "extractor1", "type": "machine-count", "machine": "extractor", "required": "1" },
+    { "id": "extractor50", "type": "machine-count", "machine": "extractor", "required": "50" },
+    { "id": "extractor100", "type": "machine-count", "machine": "extractor", "required": "100" },
+    { "id": "extractor300", "type": "machine-count", "machine": "extractor", "required": "300" },
+    { "id": "extractor500", "type": "machine-count", "machine": "extractor", "required": "500" },
+
+    { "id": "refiner1", "type": "machine-count", "machine": "refiner", "required": "1" },
+    { "id": "refiner50", "type": "machine-count", "machine": "refiner", "required": "50" },
+    { "id": "refiner100", "type": "machine-count", "machine": "refiner", "required": "100" },
+    { "id": "refiner300", "type": "machine-count", "machine": "refiner", "required": "300" },
+    { "id": "refiner500", "type": "machine-count", "machine": "refiner", "required": "500" },
+
+    { "id": "machines50", "type": "total-machines", "required": "50" },
+    { "id": "machines100", "type": "total-machines", "required": "100" },
+    { "id": "machines300", "type": "total-machines", "required": "300" },
+    { "id": "machines500", "type": "total-machines", "required": "500" },
+    { "id": "machines1000", "type": "total-machines", "required": "1000" },
+    { "id": "machines5000", "type": "total-machines", "required": "5000" },
+
+    { "id": "streak7", "type":"streak-count", "required": "7" },
+    { "id": "streak30", "type":"streak-count", "required": "30" }
+]

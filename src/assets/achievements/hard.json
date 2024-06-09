@@ -1,0 +1,13 @@
+[
+    { "id": "extractor1000", "type":"machine-count", "machine": "extractor", "required": "1000" },
+    { "id": "extractor5000", "type":"machine-count", "machine": "extractor", "required": "5000" },
+
+    { "id": "refiner1000", "type":"machine-count", "machine": "refiner", "required": "1000" },
+    { "id": "refiner5000", "type":"machine-count", "machine": "refiner", "required": "5000" },
+
+    { "id": "machines50000", "type":"total-machines", "required": "50000" },
+    { "id": "machines100000", "type":"total-machines", "required": "100000" },
+
+    { "id": "streak100", "type":"streak-count", "required": "100" },
+    { "id": "streak365", "type":"streak-count", "required": "365" }
+]

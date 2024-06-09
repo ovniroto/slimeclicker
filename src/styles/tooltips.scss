@@ -1,0 +1,153 @@
+@use 'variables' as v;
+
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before, .bs-tooltip-bottom .tooltip-arrow::before {
+    border-width: 0 !important;
+}
+
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before, .bs-tooltip-end .tooltip-arrow::before {
+    border-width: 0 !important;
+}
+
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before, .bs-tooltip-top .tooltip-arrow::before {
+    border-width: 0 !important;
+}
+
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before, .bs-tooltip-start .tooltip-arrow::before {
+    border-width: 0 !important;
+}
+
+.tooltip-inner {
+    padding: 13px !important;
+    border: 6px solid transparent;
+    border-image: v.$border-tooltip 6 round;
+    background: v.$background-page !important;
+    min-width: 331px !important;
+    font-size: 14px !important;
+    font-family: 'AlegreyaSans' !important;
+    border-radius: 10px;
+    box-shadow: 0px 0px 13px rgb(0 0 0 / 34%);
+}
+
+.tooltip.show {
+    opacity: 1 !important;
+}
+
+.achievement-tooltip .tooltip-inner {
+    text-align: left !important;
+}
+
+.tooltip-block .icon {
+    width: 58px;
+    height: 58px;
+}
+
+.fade {
+    -webkit-transition: opacity 0s linear !important;
+    -o-transition: opacity 0s linear !important;
+    transition: opacity 0s linear !important;
+}
+
+.tooltip-block .icon.special-unknown {
+    background: v.$questionMarks;
+    background-position: 0px -117px;
+}
+
+.tooltip-block .icon.normal-unknown {
+    background: v.$questionMarks;
+    background-position: 0px 0px;
+}
+
+.tooltip-block .icon.hard-unknown {
+    background: v.$questionMarks;
+    background-position: 0px -58px;
+}
+
+.tooltip-block .title {
+    position: relative;
+    margin-left: 64px;
+    margin-top: -50px !important;
+    font-family: 'AlegreyaSansBold';
+    font-size: 16px;
+}
+
+.tooltip-block .subtitle {
+    position: relative;
+    margin-left: 64px;
+    font-family: 'AlegreyaSans';
+    font-size: 13px;
+}
+
+.tooltip-block .description {
+    margin-top: 18px;
+    position: relative;
+    font-family: 'AlegreyaSans';
+    font-size: 15px;
+    border-top: 1px dashed rgb(85 87 104 / 71%);
+    padding: 10px 0px 0px 0px;
+    color: rgb(183 184 195);
+}
+
+.tooltip-block span.normal {
+    color: rgb(68, 236, 100);
+    text-shadow: 0px 0px 7px rgba(68, 236, 100, 0.71);
+    font-family: 'AlegreyaSansBold';
+}
+
+.tooltip-block span.special {
+    color: rgb(246, 208, 0);
+    text-shadow: 0px 0px 7px rgba(255, 180, 50, 0.71);
+    font-family: 'AlegreyaSansBold';
+}
+
+.tooltip-block span.hard {
+    color: rgb(255, 50, 50);
+    text-shadow: 0px 0px 7px rgba(255, 50, 50, 0.71);
+    font-family: 'AlegreyaSansBold';
+}
+
+.tooltip-block .unlocked span {
+    float: right;
+}
+
+.tooltip-block .unlocked {
+    font-size: 9px;
+    margin-top: 8px;
+    font-family: 'Verdana';
+    background: rgb(17 17 20 / 10%);
+    color: rgb(163 164 177);
+    padding: 6px 9px 4px 9px;
+    border-radius: 3px;
+    /*border: 1px dashed rgb(255 255 255 / 10%);*/
+}
+
+.tooltip-block .description b {
+    background: rgb(0 0 0 / 20%);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin: 0px 3px;
+}
+
+/* */
+
+.tooltip.losdev {
+    margin-top: 40px !important;
+    margin-left: -162px !important;
+}
+
+.tooltip.shop {
+    margin-top: -6px !important;
+    margin-left: 102px !important;
+}
+
+.tooltip.shop .tooltip-inner {
+    min-width: 346px !important;
+}
+
+.tooltip.money {
+    margin-top: 67px !important;
+    margin-right: -89px !important;
+}
+
+.tooltip.money .tooltip-inner {
+    min-width: 346px !important;
+}

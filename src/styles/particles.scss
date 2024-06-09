@@ -1,0 +1,11 @@
+@use 'variables' as v;
+
+.clicker .plus-particle {
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    font-family: "UbuntuMono";
+    text-shadow: 0px 0px 8px #3e437a;
+    animation: plus-animation 8s;
+    font-size: 23px;
+}

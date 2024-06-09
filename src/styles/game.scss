@@ -1,0 +1,84 @@
+@use 'variables' as v;
+
+.game-head {
+    background: v.$background-head;
+    box-shadow: 0px 0px 30px rgb(12 12 16 / 58%);
+    z-index: 99;
+    position: relative;
+    height: 64px;
+    width: 100%;
+}
+
+.game-head ul {
+    padding: 0;
+    margin: 0;
+}
+
+.game-page {
+    display: none;
+    padding: 24px;
+    background: rgb(31 32 40 / 34%);
+    position: relative;
+    overflow: auto;
+    box-sizing: border-box;
+    height: calc(100vh - 100px);
+}
+
+.game-page {
+    scrollbar-width: auto;
+    scrollbar-color: rgb(59 162 100) rgb(40 40 49);
+}
+
+.game-page.active {
+    display: block;
+}
+
+.game-page > h1 {
+    font-family: "AlegreyaSansBold";
+    text-align: center;
+    margin-top: -36px;
+    margin-bottom: -13px;
+    font-size: 44px;
+    color: #e8ebf1;
+    height: 104px;
+    padding: 29px;
+    box-shadow: 0px 0px 20px 20px rgb(46 46 58) inset;
+    text-shadow: 0px 0px 20px rgb(33 33 42);
+}
+
+.game-page > h1.stats {
+    background: v.$header-stats;
+}
+
+.game-page > h1.achievements {
+    background: v.$header-achievements;
+}
+
+.game-page > h1.information {
+    background: v.$header-information;
+}
+
+.game-page > h1.updates {
+    background: v.$header-updates;
+}
+
+.game-page .page-content {
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 28%);
+    background: v.$background-page;
+    border: 6px solid transparent;
+    border-image: v.$border-page 6 round;
+    border-radius: 10px;
+    padding: 23px;
+    color: #c6c6cb;
+    font-size: 14px;
+}
+
+.game-page .page-content a:hover {
+    color: #ffffff;
+}
+
+.game-page .page-content a {
+    color: #c6c6cb;
+    text-decoration: none;
+    font-weight: bold;
+}

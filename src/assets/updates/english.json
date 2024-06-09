@@ -1,0 +1,32 @@
+[
+    {
+        "version": "0.1.1",
+        "type": "alpha",
+        "release": 1652408315000,
+        "title": "Name change, new ideas and design improvement",
+        "description": "After a few days I didn't quite like the main idea of the game and came up with something totally new. I decided that the game is now about slimes, because I like them and because they are funny.",
+        "changes": [
+            "Now the big button is a slime.",
+            "Clicking on the slime will give 'blorbs' which would be a kind of sticky substance that slimes give off.",
+            "I have changed the design of the buttons improving them a bit so that they have more consistency with respect to the current design.",
+            "I have added three achievement categories and several achievements in each of them.",
+            "The game design is taking shape. I'm practicing with pixelart hehe.",
+            "Now the figures will be seen with the respective name from 1 million.",
+            "I have added tooltips that are displayed when you put the mouse over some buttons or texts.",
+            "I have added notifications to know at all times the achievements you earn or to show a message from the game.",
+            "I have added sounds on some buttons."
+        ]
+    },
+    {
+        "version": "0.0.1",
+        "type": "alpha",
+        "release": 1651498646000,
+        "title": "First version of something that could be a game",
+        "description": "This is the most basic version of the game. You can click on a big button and it gives out particles. I still don't have a very clear idea of the game or the design, so I'll see what I do with the passing of the weeks.",
+        "changes": [
+            "Added big button to click and it gives particles in return!",
+            "Page with game statistics such as the day the game started, time played, etc.",
+            "Basic game options: Change language, save game, export save file or import it, etc."
+        ]
+    }
+]

@@ -1,0 +1,17 @@
+@use 'variables' as v;
+
+.panel-items .shop.item .icon {
+    background-image: v.$buildings;
+}
+
+/* Machines */
+
+.panel-items .shop.item .extractor {
+    background-image: v.$buildings;
+    background-position: 0px 0px;
+}
+
+.panel-items .shop.item .refiner {
+    background-image: v.$buildings;
+    background-position: 0px -58px;
+}

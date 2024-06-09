@@ -1,2 +1,1 @@
-# slimeclicker
- 
+# [SlimeClicker](https://github.com/ovniroto/slimeclicker)

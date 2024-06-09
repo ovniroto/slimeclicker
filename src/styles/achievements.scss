@@ -1,0 +1,178 @@
+@use 'variables' as v;
+
+.achievement-list {
+    margin: 10px -26px 10px -26px;
+    padding: 22px 10px 12px 23px;
+    border-top: 1px solid rgba(40,41,54,.43);
+    border-bottom: 1px solid rgba(40,41,54,.43);
+    background: rgba(0,0,0,.05);
+}
+
+.achievement-list.last {
+    margin-bottom: -24px;
+}
+
+.achievement-list .achievement {
+    width: 58px;
+    height: 58px;
+    display: inline-block;
+    opacity: 0.3;
+    position: relative;
+    cursor: pointer;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    filter: drop-shadow(0px 0px 4px rgb(0,0,0,0.2));
+}
+
+.achievement-list .achievement.special {
+    background: v.$questionMarks;
+    background-position: 0px -117px;;
+}
+
+.achievement-list .achievement.normal {
+    background: v.$questionMarks;
+    background-position: 0px 0px;
+}
+
+.achievement-list .achievement.hard {
+    background: v.$questionMarks;
+    background-position: 0px -58px;
+}
+
+.achievement-list .achievement.active {
+    opacity: 1;
+}
+
+.achievement-list .achievement:hover {
+    opacity: 1;
+    top: -1px;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+}
+
+.achievement-list .achievement-block {
+    margin-bottom: 30px;
+}
+
+.achievement-head h1 {
+    font-size: 20px !important;
+}
+
+#special .achievement-head h1 {
+    color: #f6d000;
+}
+
+#special .achievement-head .description {
+    margin-top: -9px;
+    margin-bottom: 20px;
+    color: rgb(255 241 185 / 66%);
+    font-size: 13px;
+}
+
+#normal .achievement-head h1 {
+    color: #44ec64;
+}
+
+#normal .achievement-head .description {
+    margin-top: -9px;
+    margin-bottom: 20px;
+    color: rgb(206 246 196 / 66%);
+    font-size: 13px;
+}
+
+#hard .achievement-head h1 {
+    color: #ec4444;
+}
+
+#hard .achievement-head .description {
+    margin-top: -9px;
+    margin-bottom: 20px;
+    color: rgba(246, 196, 196, 0.66);
+    font-size: 13px;
+}
+
+.achievement-head {
+    position: relative;
+}
+
+.achievement-head .percent span {
+    padding: 2px 6px 0px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    float: left;
+    margin-right: 13px;
+    margin-top: 5px;
+    font-family: 'Verdana';
+    font-weight: bold;
+}
+
+#normal .achievement-head .percent span {
+    background: #43d55f;
+    color: #0b6623;
+}
+
+#special .achievement-head .percent span {
+    background: #ffce3d;
+    color: #af5f00;
+}
+
+#hard .achievement-head .percent span {
+    background: #ff3d3d;
+    color: #af0000;
+}
+
+.achievement-head .percent {
+    right: 0px;
+    top: 8px;
+    position: absolute;
+    font-size: 20px;
+}
+
+/* Special Achievements */
+
+.gamesaved {
+    background: v.$specialAchievements !important;
+    background-position: 0px 0px !important;
+}
+
+.questionmark {
+    background: v.$specialAchievements !important;
+    background-position: 0px -58px !important;
+}
+
+/* Normal Achievements */
+
+/* Extractors */
+
+.extractor1 {
+    background: v.$normalAchievements !important;
+    background-position: 0px 0px !important;
+}
+
+.extractor50 {
+    background: v.$normalAchievements !important;
+    background-position: -58px 0px !important;
+}
+
+/* Refineries */
+
+.refiner1 {
+    background: v.$normalAchievements !important;
+    background-position: 0px -58px !important;
+}
+
+.refiner50 {
+    background: v.$normalAchievements !important;
+    background-position: -58px -58px !important;
+}
+
+/* Machines */
+
+.machines50 {
+    background: v.$normalAchievements !important;
+    background-position: 0px -118px !important;
+}
+
+.machines100 {
+    background: v.$normalAchievements !important;
+    background-position: -58px -118px !important;
+}

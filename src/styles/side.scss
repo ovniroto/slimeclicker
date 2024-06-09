@@ -1,0 +1,102 @@
+@use 'variables' as v;
+
+/* Side */
+
+.side-head {
+    position: relative;
+    background: v.$background-head;
+    background-position: 0px 0px;
+    height: 64px;
+}
+
+.side-subhead {
+    position: relative;
+    background: v.$background-head;
+    background-position: 0px -344px;
+    box-shadow: 0px 17px 21px rgb(0 0 0 / 30%);
+    height: 40px;
+}
+
+.side-container.active {
+    display: block;
+}
+
+/* Shop */
+
+.panel-title {
+    color: #d3dae1;
+    font-size: 11px;
+    font-family: "AlegreyaSansBold";
+    padding: 14px 11px 12px 22px;
+    background: rgba(18,19,22,0);
+    text-shadow: 0px 0px 6px #0a0b0e;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    box-shadow: inset 0 24px 10px -20px rgb(38 38 48 / 90%);
+    border-top: 1px solid rgb(23 23 26 / 68%);
+}
+
+.panel-items {
+    padding: 0px;
+}
+
+.panel-items .shop.item {
+    position: relative;
+    color: #fff;
+    height: 86px;
+    background: v.$button-shop;
+    background-position: 0px 0px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.panel-items .shop.item:hover {
+    background: v.$button-shop;
+    background-position: 0px -86px;
+}
+
+.panel-items .shop.item .icon {
+    position: absolute;
+    left: 18px;
+    top: 11px;
+    font-size: 18px;
+    height: 58px;
+    width: 58px;
+}
+
+.panel-items .shop.item .title {
+    position: absolute;
+    left: 85px;
+    top: 18px;
+    font-size: 23px;
+    font-family: "AlegreyaSansBold";
+    text-shadow: 2px 2px 1px #2b2c37;
+    color: rgb(255 255 255);
+}
+
+.panel-items .shop.item .price {
+    position: absolute;
+    left: 86px;
+    top: 43px;
+    font-size: 11px;
+    color: #ffd618;
+    font-weight: bold;
+}
+
+.panel-items .shop.item .price img {
+    margin-top: -3px;
+    margin-right: 4px;
+}
+
+.panel-items .shop.item .owned {
+    position: absolute;
+    right: 26px;
+    top: 10px;
+    font-size: 38px;
+    font-family: "AlegreyaSansBold";
+    text-shadow: 0px 0px 8px rgb(0 0 0 / 49%);
+}
+
+.panel-items .shop.item.canbuy {
+    opacity: 1;
+}

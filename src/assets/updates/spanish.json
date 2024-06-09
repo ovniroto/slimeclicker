@@ -1,0 +1,32 @@
+[
+    {
+        "version": "0.1.1",
+        "type": "alpha",
+        "release": 1652408315000,
+        "title": "Cambio de nombre, nuevas ideas y mejora del diseño",
+        "description": "Después de unos días no terminó de gustarme la idea principal del juego y he ideado algo totalmente nuevo. He decidido que ahora el juego trata sobre slimes, porque me gustan y porque son graciosos.",
+        "changes": [
+            "Ahora el botón grande es un slime.",
+            "Al dar click al slime dará 'blorbs' que vendría a ser una especie de sustancia pegajosa que desprenden los slimes.",
+            "He cambiado el diseño de los botones mejorándolos un poco para que tengan más consistencia respecto al diseño actual.",
+            "He añadido tres categorías de logros y varios logros en cada una de ellas.",
+            "El diseño del juego va cogiendo forma. Estoy practicando con el pixelart jeje.",
+            "Ahora las cifras se verán con el respectivo nombre a partir de 1 millón.",
+            "He añadido tooltips que se muestran al poner el ratón encima de algunos botones o textos.",
+            "He añadido notificaciones para saber en todo momento los logros que ganas o para mostrar mensaje del juego.",
+            "He añadido sonidos en algunos botones."
+        ]
+    },
+    {
+        "version": "0.0.1",
+        "type": "alpha",
+        "release": 1651498646000,
+        "title": "Primera versión de algo que podría ser un juego",
+        "description": "Esta es la versión más básica del juego. Se puede hacer click a un botón grande y da partículas. Aún no tengo muy clara la idea del juego ni el diseño, así que iré viendo que hago con el paso de las semanas.",
+        "changes": [
+            "Añadido botón grande al que dar click y da partículas a cambio!",
+            "Página con estadísticas del juego como día en el que empezó la partida, tiempo jugado, etc.",
+            "Opciones básicas del juego: Cambiar idioma, guardar partida, exportar archivo de guardado o importarlo, etc."
+        ]
+    }
+]

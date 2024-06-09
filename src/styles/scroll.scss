@@ -1,0 +1,16 @@
+@use 'variables' as v;
+
+/* Scroll */
+.game-page::-webkit-scrollbar {
+    width: 9px;
+}
+
+.game-page::-webkit-scrollbar-track {
+    background: rgb(34 35 42 / 39%);
+}
+
+.game-page::-webkit-scrollbar-thumb {
+    background-color: rgb(59 162 100);
+    border-radius: 20px;
+    border: 3px solid rgb(40 40 49);
+}

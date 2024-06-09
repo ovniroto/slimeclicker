@@ -1,0 +1,8 @@
+{
+    "garden": {
+        "icon": "garden",
+        "price": 15000,
+        "persecond": 100,
+        "multiplier": 1.18
+    }
+}
